@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "rokiros-mod",
+	"version": "${version}",
+	"name": "Rokiro's Mod",
+	"description": "Mod de prueba por RokiroCMD!",
+	"authors": [
+		"RokiroCMD"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rokiros-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.rokiro.rokiromod.RokirosMod"
+		],
+		"client": [
+			"net.rokiro.rokiromod.RokirosModClient"
+		],
+		"fabric-datagen": [
+			"net.rokiro.rokiromod.RokirosModDataGenerator"
+		]
+	},
+	"mixins": [
+		"rokiros-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
