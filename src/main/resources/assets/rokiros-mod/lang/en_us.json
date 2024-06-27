@@ -1,0 +1,55 @@
+{
+  "item.rokiros-mod.hylian_steel": "Hylian Steel",
+  "item.rokiros-mod.hylian_rock_chunk": "Chunk of Hylian Ore",
+  "item.rokiros-mod.triforce": "Triforce",
+  "item.rokiros-mod.hylian_metal_detector": "Hylian Metal Detector",
+  "item.rokiros-mod.small_key": "Small key",
+  "item.rokiros-mod.goron_rocks": "Goron Rocks",
+  "item.rokiros-mod.hylian_sword": "Hylian Sword",
+  "item.rokiros-mod.hylian_pickaxe": "Hylian Pickaxe",
+  "item.rokiros-mod.hylian_axe": "Hylian Axe",
+  "item.rokiros-mod.hylian_shovel": "Hylian Shovel",
+
+  "tooltip.rokiros-mod.metal_detector.tooltip": "Detects valuable minerals when Right clicked on ground",
+
+  "itemgroup.triforce_items": "Triforce Adventures: Items",
+  "itemgroup.triforce_tools": "Triforce Adventures: Tools",
+  "itemgroup.triforce_weapons": "Triforce Adventures: Weapons",
+  "itemgroup.triforce_blocks": "Triforce Adventures: Blocks",
+  "itemgroup.triforce_special_blocks": "Triforce Adventures: Special Blocks",
+
+  "block.rokiros-mod.hylian_steel_block": "Block of Hylian Steel",
+  "block.rokiros-mod.hylian_ore": "Hylian Ore",
+
+  "block.rokiros-mod.dungeon_forest_wood": "Dungeon Forest Wood",
+  "block.rokiros-mod.dungeon_forest_wood_slab": "Dungeon Forest Wood Slab",
+  "block.rokiros-mod.dungeon_forest_wood_stairs": "Dungeon Forest Wood Stairs",
+  "block.rokiros-mod.dungeon_forest_wood_fence": "Dungeon Forest Wood Fence",
+  "block.rokiros-mod.dungeon_forest_wood_wall": "Dungeon Forest Wood Wall",
+
+  "block.rokiros-mod.dungeon_forest_brick": "Dungeon Forest Bricks",
+  "block.rokiros-mod.dungeon_forest_brick_light": "Dungeon Forest Bricks Light Entrance",
+  "block.rokiros-mod.dungeon_forest_brick_slab": "Dungeon Forest Bricks Slab",
+  "block.rokiros-mod.dungeon_forest_brick_stairs": "Dungeon Forest Bricks Stairs",
+  "block.rokiros-mod.dungeon_forest_brick_wall": "Dungeon Forest Bricks Wall",
+
+  "block.rokiros-mod.dungeon_forest_rock": "Dungeon Forest Rocks Block",
+  "block.rokiros-mod.dungeon_forest_rock_light": "Dungeon Forest Rocks Light Entrance",
+  "block.rokiros-mod.dungeon_forest_rock_slab": "Dungeon Forest Rocks Slab",
+  "block.rokiros-mod.dungeon_forest_rock_stairs": "Dungeon Forest Rocks Stairs",
+  "block.rokiros-mod.dungeon_forest_rock_wall": "Dungeon Forest Rocks Wall",
+
+
+  "block.rokiros-mod.dungeon_forest_grass": "Dungeon Forest Grass Block",
+  "block.rokiros-mod.dungeon_forest_grass_slab": "Dungeon Forest Grass Slab",
+  "block.rokiros-mod.dungeon_forest_grass_stairs": "Dungeon Forest Grass Stairs",
+
+  "block.rokiros-mod.dungeon_wood": "Dungeon Wood",
+  "block.rokiros-mod.dungeon_wood_slab": "Dungeon Wood Slab",
+  "block.rokiros-mod.dungeon_wood_stairs": "Dungeon Wood Stairs",
+  "block.rokiros-mod.dungeon_wood_fence": "Dungeon Wood Fence",
+  "block.rokiros-mod.dungeon_wood_fence_gate": "Dungeon Wood Fence Gate",
+  "block.rokiros-mod.dungeon_wood_wall": "Dungeon Wood Wall",
+  "block.rokiros-mod.dungeon_wood_trapdoor": "Dungeon Wood trapdoor",
+  "block.rokiros-mod.dungeon_wood_lock": "Dungeon Wood Lock"
+}
