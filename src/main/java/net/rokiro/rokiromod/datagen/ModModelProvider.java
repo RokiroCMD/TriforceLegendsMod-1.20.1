@@ -4,9 +4,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.Identifier;
 import net.rokiro.rokiromod.block.ModBlocks;
 import net.rokiro.rokiromod.item.ModItems;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -70,5 +74,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HYLIAN_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.HYLIAN_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.HYLIAN_SHOVEL, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.BOKOBLIN_SPAWN_EGG,
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.BOKOBLIN_FANG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BOKOBLIN_HORN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BOKOBLIN_VISCERA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAJORAS_MASK, Models.GENERATED);
+
     }
 }

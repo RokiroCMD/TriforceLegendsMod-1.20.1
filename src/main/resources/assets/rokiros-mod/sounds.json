@@ -1,0 +1,39 @@
+{
+  "bokoblin_ambient": {
+    "subtitle": "sounds.rokiros-mod.bokoblin_ambient",
+    "sounds": [
+      "rokiros-mod:bokoblin_ambient",
+      "rokiros-mod:bokoblin_ambient2"
+    ]
+  },
+  "bokoblin_attack": {
+    "subtitle": "sounds.rokiros-mod.bokoblin_attack",
+    "sounds": [
+      "rokiros-mod:bokoblin_attack"
+    ]
+  },
+  "bokoblin_dead": {
+    "subtitle": "sounds.rokiros-mod.bokoblin_dead",
+    "sounds": [
+      "rokiros-mod:bokoblin_dead"
+    ]
+  },
+  "bokoblin_hit": {
+    "subtitle": "sounds.rokiros-mod.bokoblin_hit",
+    "sounds": [
+      "rokiros-mod:bokoblin_hit"
+    ]
+  },
+  "skullkid_laugh": {
+    "subtitle": "sounds.rokiros-mod.skullkid_laugh",
+    "sounds": [
+      "rokiros-mod:skullkid_laugh"
+    ]
+  },
+  "skullkid_scream": {
+    "subtitle": "sounds.rokiros-mod.skullkid_scream",
+    "sounds": [
+      "rokiros-mod:skullkid_scream"
+    ]
+  }
+}

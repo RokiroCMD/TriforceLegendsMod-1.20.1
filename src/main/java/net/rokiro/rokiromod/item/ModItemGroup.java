@@ -24,6 +24,9 @@ public class ModItemGroup {
                     entries.add(ModItems.TRIFORCE);
                     entries.add(ModItems.SMALL_KEY);
                     entries.add(ModItems.GORON_ROCKS);
+                    entries.add(ModItems.BOKOBLIN_FANG);
+                    entries.add(ModItems.BOKOBLIN_HORN);
+                    entries.add(ModItems.BOKOBLIN_VISCERA);
 
                     }).build()
     );
@@ -107,6 +110,28 @@ public class ModItemGroup {
                         entries.add(ModBlocks.DUNGEON_WOOD_LOCK);
                     }).build()
     );
+
+    public static final ItemGroup ZELDA_SPAWNERS_GROUP = Registry.register(
+            Registries.ITEM_GROUP, new Identifier(RokirosMod.MOD_ID,"triforce_spawners"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemgroup.triforce_spawners"))
+                    .icon(() -> new ItemStack(ModItems.BOKOBLIN_SPAWN_EGG))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.BOKOBLIN_SPAWN_EGG);
+                    }).build()
+    );
+
+
+    public static final ItemGroup ZELDA_ARMORS_GROUP = Registry.register(
+            Registries.ITEM_GROUP, new Identifier(RokirosMod.MOD_ID,"triforce_armors"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemgroup.triforce_armors"))
+                    .icon(() -> new ItemStack(ModItems.MAJORAS_MASK))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.MAJORAS_MASK);
+                    }).build()
+    );
+
 
     public static void registerItemGroups(){
         RokirosMod.LOGGER.info("Registering item grops for " + RokirosMod.MOD_ID);

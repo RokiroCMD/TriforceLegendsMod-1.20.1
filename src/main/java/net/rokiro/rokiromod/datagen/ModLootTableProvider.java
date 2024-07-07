@@ -27,6 +27,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.HYLIAN_ORE, copperOreLikeDrops(ModBlocks.HYLIAN_ORE,ModItems.HYLIAN_ROCK_CHUNK, 2f, 4f));
 
+
+
+
     }
 
     public LootTable.Builder copperOreLikeDrops(Block drop, Item itemDropped, float min, float max) {

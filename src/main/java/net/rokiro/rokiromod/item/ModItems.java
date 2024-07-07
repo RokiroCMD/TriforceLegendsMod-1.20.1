@@ -8,6 +8,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.rokiro.rokiromod.RokirosMod;
+import net.rokiro.rokiromod.entity.ModEntities;
+import net.rokiro.rokiromod.item.custom.MajorasMaskItem;
 import net.rokiro.rokiromod.item.custom.MetalDetectorItem;
 
 public class ModItems {
@@ -18,6 +20,9 @@ public class ModItems {
     public static final Item HYLIAN_METAL_DETECTOR = registerItem("hylian_metal_detector", new MetalDetectorItem(new FabricItemSettings().maxDamage(64)));
     public static final Item SMALL_KEY = registerItem("small_key", new Item(new FabricItemSettings()));
     public static final Item GORON_ROCKS = registerItem("goron_rocks", new Item(new FabricItemSettings()));
+    public static final Item BOKOBLIN_FANG = registerItem("bokoblin_fang", new Item(new FabricItemSettings()));
+    public static final Item BOKOBLIN_HORN = registerItem("bokoblin_horn", new Item(new FabricItemSettings()));
+    public static final Item BOKOBLIN_VISCERA = registerItem("bokoblin_viscera", new Item(new FabricItemSettings()));
 
     public static final Item HYLIAN_PICKAXE = registerItem("hylian_pickaxe",
             new PickaxeItem(ModToolMaterials.HYLIAN_SET, -1, -2.8f, new FabricItemSettings()));
@@ -28,7 +33,11 @@ public class ModItems {
 
     public static final Item HYLIAN_SWORD = registerItem("hylian_sword",
             new SwordItem(ModToolMaterials.HYLIAN_SET, 3, -2.4f, new FabricItemSettings()));
+    public static final Item MAJORAS_MASK = registerItem("majoras_mask",
+            new MajorasMaskItem(ModArmorMaterials.MAJORAS, ArmorItem.Type.HELMET, new FabricItemSettings()));
 
+    public static final Item BOKOBLIN_SPAWN_EGG = registerItem("bokoblin_spawn_egg",
+        new SpawnEggItem(ModEntities.BOKOBLIN,0xFA5E3D, 0x6FF7FD,new FabricItemSettings()));
 
     /*private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries){
         entries.add(HYLIAN_STEEL);

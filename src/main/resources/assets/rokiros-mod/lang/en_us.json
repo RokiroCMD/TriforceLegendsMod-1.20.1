@@ -10,6 +10,12 @@
   "item.rokiros-mod.hylian_axe": "Hylian Axe",
   "item.rokiros-mod.hylian_shovel": "Hylian Shovel",
 
+  "item.rokiros-mod.bokoblin_spawn_egg": "Bokoblin Spawn Egg",
+  "item.rokiros-mod.bokoblin_fang": "Bokoblin Fang",
+  "item.rokiros-mod.bokoblin_horn": "Bokoblin Horn",
+  "item.rokiros-mod.bokoblin_viscera": "Bokoblin Viscera",
+  "item.rokiros-mod.majoras_mask": "Majora's Mask",
+
   "tooltip.rokiros-mod.metal_detector.tooltip": "Detects valuable minerals when Right clicked on ground",
 
   "itemgroup.triforce_items": "Triforce Adventures: Items",
@@ -17,6 +23,8 @@
   "itemgroup.triforce_weapons": "Triforce Adventures: Weapons",
   "itemgroup.triforce_blocks": "Triforce Adventures: Blocks",
   "itemgroup.triforce_special_blocks": "Triforce Adventures: Special Blocks",
+  "itemgroup.triforce_spawners": "Triforce Adventures: Spawners",
+  "itemgroup.triforce_armors": "Triforce Adventures: Armors",
 
   "block.rokiros-mod.hylian_steel_block": "Block of Hylian Steel",
   "block.rokiros-mod.hylian_ore": "Hylian Ore",
@@ -51,5 +59,12 @@
   "block.rokiros-mod.dungeon_wood_fence_gate": "Dungeon Wood Fence Gate",
   "block.rokiros-mod.dungeon_wood_wall": "Dungeon Wood Wall",
   "block.rokiros-mod.dungeon_wood_trapdoor": "Dungeon Wood trapdoor",
-  "block.rokiros-mod.dungeon_wood_lock": "Dungeon Wood Lock"
+  "block.rokiros-mod.dungeon_wood_lock": "Dungeon Wood Lock",
+
+  "sounds.rokiros-mod.bokoblin_ambient": "Bokoblin ambient",
+  "sounds.rokiros-mod.bokoblin_attack": "Bokoblin attack",
+  "sounds.rokiros-mod.bokoblin_dead": "Bokoblin dead",
+  "sounds.rokiros-mod.bokoblin_hit": "Bokoblin hit",
+  "sounds.rokiros-mod.skullkid_scream": "Skullkid scream",
+  "sounds.rokiros-mod.skullkid_laugh": "Skullkid laugh"
 }
