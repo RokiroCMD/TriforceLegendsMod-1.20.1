@@ -54,7 +54,7 @@ public class BokoblinAttackGoal extends MeleeAttackGoal {
     }
 
     private boolean isEnemyInAttackDistance(LivingEntity pEnemy){
-        return this.entity.distanceTo(pEnemy) <= 3f;
+        return this.entity.distanceTo(pEnemy) <= 2f;
     }
 
     protected void resetAttackCooldown(){

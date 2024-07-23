@@ -24,6 +24,19 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.HYLIAN_STEEL_BLOCK);
+        addDrop(ModBlocks.LARGE_PIECE_MEAT);
+        addDrop(ModBlocks.BOKO_PLANKS);
+        addDrop(ModBlocks.BOKO_STONE);
+        addDrop(ModBlocks.BOKO_COBBLESTONE);
+        addDrop(ModBlocks.BOKO_SLAB_PLANKS);
+        addDrop(ModBlocks.BOKO_SLAB_STONE);
+        addDrop(ModBlocks.BOKO_SLAB_COBBLESTONE);
+        addDrop(ModBlocks.BOKO_STAIR_PLANKS);
+        addDrop(ModBlocks.BOKO_STAIRS_STONE);
+        addDrop(ModBlocks.BOKO_STAIRS_COBBLESTONE);
+        addDrop(ModBlocks.BOKO_FENCE_PLANKS);
+        addDrop(ModBlocks.BOKO_FENCE_GATE_PLANKS);
+
 
         addDrop(ModBlocks.HYLIAN_ORE, copperOreLikeDrops(ModBlocks.HYLIAN_ORE,ModItems.HYLIAN_ROCK_CHUNK, 2f, 4f));
 

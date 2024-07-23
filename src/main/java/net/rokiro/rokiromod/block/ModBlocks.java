@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.rokiro.rokiromod.RokirosMod;
 import net.rokiro.rokiromod.block.custom.DungeonWoodLockBlock;
+import net.rokiro.rokiromod.block.custom.LargePieceMeatBlock;
 
 public class ModBlocks {
 
@@ -88,6 +89,37 @@ public class ModBlocks {
     public static final Block DUNGEON_WOOD_LOCK = registerBlock("dungeon_wood_lock",
             new DungeonWoodLockBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
 
+    public static final Block BOKO_STONE = registerBlock("boko_stone",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+
+    // BOKO PLANKS
+    public static final Block BOKO_PLANKS = registerBlock("boko_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS)));
+    public static final Block BOKO_STAIR_PLANKS = registerBlock("boko_stair_planks",
+            new StairsBlock(ModBlocks.BOKO_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS)));
+    public static final Block BOKO_SLAB_PLANKS = registerBlock("boko_slab_planks",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS)));
+    public static final Block BOKO_FENCE_PLANKS = registerBlock("boko_fence_planks",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS)));
+    public static final Block BOKO_FENCE_GATE_PLANKS = registerBlock("boko_fence_gate_planks",
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS),WoodType.CHERRY));
+
+
+    public static final Block BOKO_COBBLESTONE = registerBlock("boko_cobblestone",
+            new Block(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+    public static final Block BOKO_SLAB_COBBLESTONE = registerBlock("boko_slab_cobblestone",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+    public static final Block BOKO_STAIRS_COBBLESTONE = registerBlock("boko_stairs_cobblestone",
+            new StairsBlock(ModBlocks.BOKO_COBBLESTONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+
+    public static final Block BOKO_SLAB_STONE = registerBlock("boko_slab_stone",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block BOKO_STAIRS_STONE = registerBlock("boko_stairs_stone",
+            new StairsBlock(ModBlocks.BOKO_STONE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE)));
+
+
+    public static final Block LARGE_PIECE_MEAT = registerBlock("large_piece_meat",
+            new LargePieceMeatBlock(FabricBlockSettings.copyOf(Blocks.NETHER_WART_BLOCK).nonOpaque()));
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);
         return Registry.register(Registries.BLOCK, new Identifier(RokirosMod.MOD_ID, name), block);

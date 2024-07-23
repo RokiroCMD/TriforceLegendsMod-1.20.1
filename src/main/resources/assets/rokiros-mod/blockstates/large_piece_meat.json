@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "rokiros-mod:block/large_piece_meat"
+    },
+    "facing=south": {
+      "model": "rokiros-mod:block/large_piece_meat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rokiros-mod:block/large_piece_meat",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "rokiros-mod:block/large_piece_meat",
+      "y": 90
+    }
+  }
+}

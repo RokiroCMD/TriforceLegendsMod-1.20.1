@@ -7,7 +7,8 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    HYLIAN_SET(ToolMaterials.DIAMOND.getMiningLevel(), 1100, 10.0f, 3.0f, 15, () -> Ingredient.ofItems(ModItems.HYLIAN_STEEL));
+    HYLIAN_SET(ToolMaterials.DIAMOND.getMiningLevel(), 1100, 10.0f, 3.0f, 15, () -> Ingredient.ofItems(ModItems.HYLIAN_STEEL)),
+    WW_MASTER_SWORD(ToolMaterials.NETHERITE.getMiningLevel(), 2500,10,5.0f, 15, () -> Ingredient.ofItems(ModItems.TRIFORCE));
 
 
     private int miningLevel;

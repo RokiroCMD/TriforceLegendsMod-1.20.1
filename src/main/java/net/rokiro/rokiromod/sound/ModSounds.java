@@ -16,6 +16,9 @@ public class ModSounds {
     public static final SoundEvent SKULLKID_LAUGH = registerSoundEvent("skullkid_laugh");
     public static final SoundEvent SKULLKID_SCREAM = registerSoundEvent("skullkid_scream");
 
+    public static final SoundEvent RUPEE_BOUNCE = registerSoundEvent("rupee_bounce");
+    public static final SoundEvent RUPEE_OBTAINED = registerSoundEvent("rupee_obtained");
+
     private static SoundEvent registerSoundEvent(String name){
         Identifier id = new Identifier(RokirosMod.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT,id, SoundEvent.of(id));

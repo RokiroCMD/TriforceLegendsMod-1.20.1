@@ -1,5 +1,6 @@
 package net.rokiro.rokiromod.datagen;
 
+import com.eliotlash.mclib.math.functions.classic.Mod;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -25,6 +26,10 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool dungeonForestBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DUNGEON_FOREST_BRICK);
         BlockStateModelGenerator.BlockTexturePool dungeonForestRockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DUNGEON_FOREST_ROCK);
         BlockStateModelGenerator.BlockTexturePool dungeonForestGrassPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DUNGEON_FOREST_GRASS);
+
+        BlockStateModelGenerator.BlockTexturePool bokoPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BOKO_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool bokoCobblestonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BOKO_COBBLESTONE);
+        BlockStateModelGenerator.BlockTexturePool bokoStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BOKO_STONE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HYLIAN_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HYLIAN_STEEL_BLOCK);
@@ -60,6 +65,20 @@ public class ModModelProvider extends FabricModelProvider {
         dungeonWoodPool.wall(ModBlocks.DUNGEON_WOOD_WALL);
 
         blockStateModelGenerator.registerTrapdoor(ModBlocks.DUNGEON_WOOD_TRAPDOOR);
+
+        // BOKO PLANKS POOLING
+        bokoPlanksPool.slab(ModBlocks.BOKO_SLAB_PLANKS);
+        bokoPlanksPool.stairs(ModBlocks.BOKO_STAIR_PLANKS);
+        bokoPlanksPool.fence(ModBlocks.BOKO_FENCE_PLANKS);
+        bokoPlanksPool.fenceGate(ModBlocks.BOKO_FENCE_GATE_PLANKS);
+
+        // BOKO COBBLESTONE POOLING
+        bokoCobblestonePool.slab(ModBlocks.BOKO_SLAB_COBBLESTONE);
+        bokoCobblestonePool.stairs(ModBlocks.BOKO_STAIRS_COBBLESTONE);
+
+        // BOKO STONE POOLING
+        bokoStonePool.slab(ModBlocks.BOKO_SLAB_STONE);
+        bokoStonePool.stairs(ModBlocks.BOKO_STAIRS_STONE);
     }
 
     @Override
@@ -81,6 +100,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BOKOBLIN_HORN, Models.GENERATED);
         itemModelGenerator.register(ModItems.BOKOBLIN_VISCERA, Models.GENERATED);
         itemModelGenerator.register(ModItems.MAJORAS_MASK, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.MEDIUM_RUPEE_BAG, Models.GENERATED);
 
     }
 }

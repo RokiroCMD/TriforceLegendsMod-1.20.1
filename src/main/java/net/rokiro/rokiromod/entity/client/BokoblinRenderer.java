@@ -7,23 +7,24 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.rokiro.rokiromod.RokirosMod;
 import net.rokiro.rokiromod.entity.custom.BokoblinEntity;
+import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class BokoblinRenderer extends MobEntityRenderer<BokoblinEntity, BokoblinModel<BokoblinEntity>> {
+public class BokoblinRenderer extends GeoEntityRenderer<BokoblinEntity>{
 
-
-    private static final Identifier TEXTURE = new Identifier(RokirosMod.MOD_ID, "textures/entity/bokoblin.png");
-    public BokoblinRenderer(EntityRendererFactory.Context context) {
-        super(context, new BokoblinModel<>(context.getPart(ModModelLayers.BOKOBLIN)), 1f);
+    public BokoblinRenderer(EntityRendererFactory.Context renderManager) {
+        super(renderManager, new BokoblinModel());
     }
 
     @Override
-    public Identifier getTexture(BokoblinEntity entity) {
-        return TEXTURE;
+    public Identifier getTextureLocation(BokoblinEntity animatable) {
+        return new Identifier(RokirosMod.MOD_ID, "textures/entity/bokoblin.png");
     }
 
+
     @Override
-    public void render(BokoblinEntity mobEntity, float f, float g, MatrixStack matrixStack,
-                       VertexConsumerProvider vertexConsumerProvider, int i) {
-        super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
+    public void render(BokoblinEntity entity, float entityYaw, float partialTick, MatrixStack poseStack,
+                       VertexConsumerProvider bufferSource, int packedLight) {
+        super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
     }
 }

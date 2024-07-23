@@ -27,7 +27,7 @@ public class ModItemGroup {
                     entries.add(ModItems.BOKOBLIN_FANG);
                     entries.add(ModItems.BOKOBLIN_HORN);
                     entries.add(ModItems.BOKOBLIN_VISCERA);
-
+                    entries.add(ModItems.MEDIUM_RUPEE_BAG);
                     }).build()
     );
 
@@ -50,6 +50,7 @@ public class ModItemGroup {
                     .icon(() -> new ItemStack(ModItems.HYLIAN_SWORD))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.HYLIAN_SWORD);
+                        entries.add(ModItems.WW_MASTER_SWORD);
                     }).build()
     );
 
@@ -97,6 +98,22 @@ public class ModItemGroup {
                         entries.add(ModBlocks.DUNGEON_WOOD_FENCE_GATE);
                         entries.add(ModBlocks.DUNGEON_WOOD_WALL);
                         entries.add(ModBlocks.DUNGEON_WOOD_TRAPDOOR);
+
+                        // BokoBlocks SET
+                        entries.add(ModBlocks.LARGE_PIECE_MEAT);
+                        entries.add(ModBlocks.BOKO_PLANKS);
+                        entries.add(ModBlocks.BOKO_SLAB_PLANKS);
+                        entries.add(ModBlocks.BOKO_STAIR_PLANKS);
+                        entries.add(ModBlocks.BOKO_FENCE_PLANKS);
+                        entries.add(ModBlocks.BOKO_FENCE_GATE_PLANKS);
+
+                        entries.add(ModBlocks.BOKO_STONE);
+                        entries.add(ModBlocks.BOKO_SLAB_STONE);
+                        entries.add(ModBlocks.BOKO_STAIRS_STONE);
+
+                        entries.add(ModBlocks.BOKO_COBBLESTONE);
+                        entries.add(ModBlocks.BOKO_SLAB_COBBLESTONE);
+                        entries.add(ModBlocks.BOKO_STAIRS_COBBLESTONE);
                     }).build()
     );
 

@@ -1,29 +1,29 @@
 package net.rokiro.rokiromod.item.custom;
 
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.sound.Sound;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.network.message.MessageType;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.text.TextColor;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.rokiro.rokiromod.RokirosMod;
+import net.rokiro.rokiromod.networking.ModPackets;
+import net.rokiro.rokiromod.util.IEntityDataSaver;
 import net.rokiro.rokiromod.util.ModTags;
+import net.rokiro.rokiromod.util.RupeesData;
 import org.jetbrains.annotations.Nullable;
 
-import java.awt.*;
 import java.util.List;
 
 public class MetalDetectorItem extends Item {
@@ -34,6 +34,7 @@ public class MetalDetectorItem extends Item {
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
+
         if (context.getWorld().isClient()){
             BlockPos positionedBlock = context.getBlockPos();
             PlayerEntity player = context.getPlayer();
@@ -57,7 +58,10 @@ public class MetalDetectorItem extends Item {
             }
             context.getStack().damage(1, context.getPlayer(),
                     playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
+            ClientPlayNetworking.send(ModPackets.RUPEES_ID, PacketByteBufs.create());
+
         }
+
         return super.useOnBlock(context);
     }
 

@@ -16,6 +16,9 @@
   "item.rokiros-mod.bokoblin_viscera": "Bokoblin Viscera",
   "item.rokiros-mod.majoras_mask": "Majora's Mask",
 
+  "item.rokiros-mod.ww_master_sword": "Master Sword [WW]",
+  "item.rokiros-mod.medium_rupee_bag": "Medium Rupee Bag",
+
   "tooltip.rokiros-mod.metal_detector.tooltip": "Detects valuable minerals when Right clicked on ground",
 
   "itemgroup.triforce_items": "Triforce Adventures: Items",
@@ -61,10 +64,30 @@
   "block.rokiros-mod.dungeon_wood_trapdoor": "Dungeon Wood trapdoor",
   "block.rokiros-mod.dungeon_wood_lock": "Dungeon Wood Lock",
 
+  "block.rokiros-mod.large_piece_meat": "Large Piece of Meat",
+  "block.rokiros-mod.boko_planks": "Boko Wood Planks",
+  "block.rokiros-mod.boko_slab_planks": "Boko Wood Slabs",
+  "block.rokiros-mod.boko_stairs_planks": "Boko Wood Stairs",
+  "block.rokiros-mod.boko_fence_planks": "Boko Wood Fence",
+  "block.rokiros-mod.boko_fence_gate_planks": "Boko Wood Fence Gate",
+
+  "block.rokiros-mod.boko_stone": "Boko Stone Planks",
+  "block.rokiros-mod.boko_slab_stone": "Boko Stone Slabs",
+  "block.rokiros-mod.boko_stairs_stone": "Boko Stone Stairs",
+
+  "block.rokiros-mod.boko_cobblestone": "Boko Cobblestone Planks",
+  "block.rokiros-mod.boko_slab_cobblestone": "Boko Cobblestone Slabs",
+  "block.rokiros-mod.boko_stairs_cobblestone": "Boko Cobblestone Stairs",
+
+  "entity.rokiros-mod.bokoblin": "Bokoblin",
+
   "sounds.rokiros-mod.bokoblin_ambient": "Bokoblin ambient",
   "sounds.rokiros-mod.bokoblin_attack": "Bokoblin attack",
   "sounds.rokiros-mod.bokoblin_dead": "Bokoblin dead",
   "sounds.rokiros-mod.bokoblin_hit": "Bokoblin hit",
   "sounds.rokiros-mod.skullkid_scream": "Skullkid scream",
-  "sounds.rokiros-mod.skullkid_laugh": "Skullkid laugh"
+  "sounds.rokiros-mod.skullkid_laugh": "Skullkid laugh",
+
+  "key.rokiros-mod.category.triforce": "Triforce Adventures",
+  "key.rokiros-mod.open_special_inventory": "Open Equipment Inv"
 }

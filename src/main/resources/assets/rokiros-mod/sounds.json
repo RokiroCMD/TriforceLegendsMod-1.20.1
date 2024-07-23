@@ -35,5 +35,17 @@
     "sounds": [
       "rokiros-mod:skullkid_scream"
     ]
+  },
+  "rupee_bounce": {
+    "subtitle": "sounds.rokiros-mod.rupee_bounce",
+    "sounds": [
+      "rokiros-mod:rupee_bounce"
+    ]
+  },
+  "rupee_obtained": {
+    "subtitle": "sounds.rokiros-mod.rupee_obtained",
+    "sounds": [
+      "rokiros-mod:rupee_obtained"
+    ]
   }
 }

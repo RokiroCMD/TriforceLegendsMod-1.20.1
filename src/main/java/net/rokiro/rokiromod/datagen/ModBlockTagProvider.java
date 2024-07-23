@@ -28,27 +28,40 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.HYLIAN_ORE)
-                .add(ModBlocks.HYLIAN_STEEL_BLOCK);
+                .add(ModBlocks.HYLIAN_STEEL_BLOCK)
+                .add(ModBlocks.BOKO_STONE)
+                .add(ModBlocks.BOKO_SLAB_STONE)
+                .add(ModBlocks.BOKO_STAIRS_STONE)
+                .add(ModBlocks.BOKO_COBBLESTONE)
+                .add(ModBlocks.BOKO_SLAB_COBBLESTONE)
+                .add(ModBlocks.BOKO_STAIRS_COBBLESTONE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.HYLIAN_ORE)
                 .add(ModBlocks.HYLIAN_STEEL_BLOCK);
 
+
+        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.BOKO_COBBLESTONE)
+                .add(ModBlocks.BOKO_SLAB_COBBLESTONE)
+                .add(ModBlocks.BOKO_STAIRS_COBBLESTONE)
+                .add(ModBlocks.BOKO_STONE)
+                .add(ModBlocks.BOKO_SLAB_STONE)
+                .add(ModBlocks.BOKO_STAIRS_STONE);
+
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.DUNGEON_WOOD_FENCE)
-                .add(ModBlocks.DUNGEON_FOREST_WOOD_FENCE);
+                .add(ModBlocks.DUNGEON_FOREST_WOOD_FENCE)
+                .add(ModBlocks.BOKO_FENCE_PLANKS);
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.DUNGEON_WOOD_WALL)
                 .add(ModBlocks.DUNGEON_FOREST_WOOD_WALL)
                 .add(ModBlocks.DUNGEON_FOREST_BRICK_WALL)
                 .add(ModBlocks.DUNGEON_FOREST_ROCK_WALL);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(ModBlocks.DUNGEON_WOOD_FENCE_GATE);
+                .add(ModBlocks.DUNGEON_WOOD_FENCE_GATE)
+                .add(ModBlocks.BOKO_FENCE_GATE_PLANKS);
 
-        /*
-        getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric","needs_tool_level_4")))
-                .add(ModBlocks.HYLIAN_STEEL_BLOCK);
-        */
 
 
     }

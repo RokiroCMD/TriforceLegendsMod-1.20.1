@@ -5,11 +5,12 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.rokiro.rokiromod.block.ModBlocks;
-import net.rokiro.rokiromod.datagen.ModWorldGenerator;
 import net.rokiro.rokiromod.entity.ModEntities;
 import net.rokiro.rokiromod.entity.custom.BokoblinEntity;
+import net.rokiro.rokiromod.entity.custom.RupeeEntity;
 import net.rokiro.rokiromod.item.ModItemGroup;
 import net.rokiro.rokiromod.item.ModItems;
+import net.rokiro.rokiromod.networking.ModPackets;
 import net.rokiro.rokiromod.particle.ModParticles;
 import net.rokiro.rokiromod.sound.ModSounds;
 import net.rokiro.rokiromod.world.gen.ModWorldGeneration;
@@ -32,5 +33,8 @@ public class RokirosMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.BOKOBLIN, BokoblinEntity.createBokoblinAttributes());
 
 		ModWorldGeneration.generateModWorldGen();
+		ModPackets.registerC2SPackets();
+
+
 	}
 }

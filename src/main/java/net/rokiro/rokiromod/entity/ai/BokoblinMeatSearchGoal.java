@@ -12,28 +12,33 @@ import net.minecraft.item.Items;
 import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.ChunkSectionPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkStatus;
+import net.rokiro.rokiromod.entity.custom.BokoblinEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class BokoblinMeatSearchGoal extends MoveToTargetPosGoal {
 
 
     private final Block targetBlock;
-    private final MobEntity stepAndDestroyMob;
+    private final BokoblinEntity stepAndDestroyMob;
     private int counter;
     private boolean hasFoundMeat = false;
     private static final int MAX_COOLDOWN = 20;
 
+
     public BokoblinMeatSearchGoal(Block targetBlock, PathAwareEntity mob, double speed, int maxYDifference) {
-        super(mob, speed, 30, maxYDifference);
+        super(mob, speed, 48, maxYDifference);
         this.targetBlock = targetBlock;
-        this.stepAndDestroyMob = mob;
+        this.stepAndDestroyMob = (BokoblinEntity) mob;
     }
 
     public boolean canStart() {
@@ -51,9 +56,15 @@ public class BokoblinMeatSearchGoal extends MoveToTargetPosGoal {
         }
     }
 
+    @Override
+    public double getDesiredDistanceToTarget() {
+        return 1.7d;
+    }
+
     public void stop() {
         super.stop();
         this.stepAndDestroyMob.fallDistance = 1.0F;
+        stepAndDestroyMob.setEating(false);
     }
 
     public void start() {
@@ -62,9 +73,20 @@ public class BokoblinMeatSearchGoal extends MoveToTargetPosGoal {
     }
 
     public void tickStepping(WorldAccess world, BlockPos pos) {
+        Random random = this.stepAndDestroyMob.getRandom();
+        world.playSound(null, pos, SoundEvents.ENTITY_GENERIC_EAT, SoundCategory.HOSTILE, 2f, stepAndDestroyMob.getRandom().nextFloat() *0.3f  +  0.85f);
+        World worldTemp = this.stepAndDestroyMob.getWorld();
+        if (!worldTemp.isClient) {
+            double d = 0.08;
+            ((ServerWorld)world).spawnParticles(new ItemStackParticleEffect(ParticleTypes.ITEM, new ItemStack(targetBlock)), (double)pos.getX() + 0.5, (double)pos.getY() + 0.7, (double)pos.getZ() + 0.5, 5, ((double)random.nextFloat() - 0.5) * 0.5, ((double)random.nextFloat() - 0.5) * 0.5, ((double)random.nextFloat() - 0.5) * 0.5, 0.10);
+        }
     }
 
     public void onDestroyBlock(World world, BlockPos pos) {
+        if (pos != null){
+            world.playSound(null, pos, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.HOSTILE, 10f, stepAndDestroyMob.getRandom().nextFloat() *0.3f  +  0.85f);
+            ((ServerWorld)world).spawnParticles(ParticleTypes.SWEEP_ATTACK, (double)pos.getX() + 1.5, (double)pos.getY() + 1, (double)pos.getZ() + 0.5, 1, 0, 0, 0, 0.15);
+        }
     }
 
     public void tick() {
@@ -72,39 +94,26 @@ public class BokoblinMeatSearchGoal extends MoveToTargetPosGoal {
         World world = this.stepAndDestroyMob.getWorld();
         BlockPos blockPos = this.stepAndDestroyMob.getBlockPos();
         BlockPos blockPos2 = this.tweakToProperPos(blockPos, world);
-        Random random = this.stepAndDestroyMob.getRandom();
-        if (this.hasReached() && blockPos2 != null) {
-            Vec3d vec3d;
-            double d;
+        if (this.hasReached()) {
+            stepAndDestroyMob.getNavigation().stop();
             if (this.counter > 0) {
-                vec3d = this.stepAndDestroyMob.getVelocity();
-                this.stepAndDestroyMob.setVelocity(vec3d.x, 0.3, vec3d.z);
-                if (!world.isClient) {
-                    d = 0.08;
-                    ((ServerWorld)world).spawnParticles(new ItemStackParticleEffect(ParticleTypes.ITEM, new ItemStack(targetBlock)), (double)blockPos2.getX() + 0.5, (double)blockPos2.getY() + 0.7, (double)blockPos2.getZ() + 0.5, 15, ((double)random.nextFloat() - 0.5) * 0.5, ((double)random.nextFloat() - 0.5) * 0.5, ((double)random.nextFloat() - 0.5) * 0.5, 0.15);
+                if (!stepAndDestroyMob.isEating()){
+                    stepAndDestroyMob.setEating(true);
                 }
             }
 
-            if (this.counter % 2 == 0) {
-                vec3d = this.stepAndDestroyMob.getVelocity();
-                this.stepAndDestroyMob.setVelocity(vec3d.x, -0.3, vec3d.z);
-                if (this.counter % 6 == 0) {
-                    this.tickStepping(world, this.targetPos);
-                }
+            if (this.counter % 20 == 0) {
+                this.tickStepping(world, this.targetPos);
             }
 
-            if (this.counter > 60) {
-                world.removeBlock(blockPos2, false);
+            if (this.counter > 300) {
                 if (!world.isClient) {
-                    for(int i = 0; i < 20; ++i) {
-                        d = random.nextGaussian() * 0.2;
-                        double e = random.nextGaussian() * 0.2;
-                        double f = random.nextGaussian() * 0.2;
-                        ((ServerWorld)world).spawnParticles(ParticleTypes.SWEEP_ATTACK, (double)blockPos2.getX() + 1.5, (double)blockPos2.getY() + 1, (double)blockPos2.getZ() + 0.5, 3, d, e, f, 0.15);
-                    }
-
                     this.onDestroyBlock(world, blockPos2);
                 }
+                if (blockPos2 != null){
+                    world.removeBlock(blockPos2, false);
+                }
+
             }
 
             ++this.counter;
@@ -117,6 +126,7 @@ public class BokoblinMeatSearchGoal extends MoveToTargetPosGoal {
         if (world.getBlockState(pos).isOf(this.targetBlock)) {
             return pos;
         } else {
+
             BlockPos[] blockPoss = new BlockPos[]{pos.down(), pos.west(), pos.east(), pos.north(), pos.south(), pos.down().down()};
             BlockPos[] var4 = blockPoss;
             int var5 = blockPoss.length;
@@ -133,6 +143,8 @@ public class BokoblinMeatSearchGoal extends MoveToTargetPosGoal {
     }
 
     protected boolean isTargetPos(WorldView world, BlockPos pos) {
+
+
         Chunk chunk = world.getChunk(ChunkSectionPos.getSectionCoord(pos.getX()), ChunkSectionPos.getSectionCoord(pos.getZ()), ChunkStatus.FULL, false);
         if (chunk == null) {
             return false;
