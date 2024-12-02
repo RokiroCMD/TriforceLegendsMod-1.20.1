@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "rokiros-mod:hylian_ore",
+    "rokiros-mod:hylian_steel_block",
+    "rokiros-mod:boko_stone",
+    "rokiros-mod:boko_slab_stone",
+    "rokiros-mod:boko_stairs_stone",
+    "rokiros-mod:boko_cobblestone",
+    "rokiros-mod:boko_slab_cobblestone",
+    "rokiros-mod:boko_stairs_cobblestone"
+  ]
+}

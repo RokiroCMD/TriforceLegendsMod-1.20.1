@@ -3,6 +3,7 @@ package net.rokiro.rokiromod.mixin;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.rokiro.rokiromod.RokirosMod;
+import net.rokiro.rokiromod.util.ArtifactEquipmentData;
 import net.rokiro.rokiromod.util.RupeesData;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -23,11 +24,12 @@ public abstract class ModPlayerServerMixin {
             if (this.networkHandler.getPlayer() != null){
                 if (!hasSpawned) {
                     age++;
-                    if (age % 20 == 0) {
+                    if (age % 5 == 0) {
                         try {
                             RupeesData.getRupees(this.networkHandler.getPlayer());
-                            RokirosMod.LOGGER.info("Listo");
                             age = 0;
+                            ArtifactEquipmentData.syncArtifactEquipment(this.networkHandler.getPlayer(),
+                                    ArtifactEquipmentData.getArtifactEquipment(this.networkHandler.getPlayer()));
                             hasSpawned = true;
                         } catch(Exception e){
                             RokirosMod.LOGGER.info("Error at loading RupeeInformation");

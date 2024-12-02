@@ -38,28 +38,9 @@ public class RupeesData {
 
 
 
-    public static int removeRupee(IEntityDataSaver player, int amount){
-
-        NbtCompound nbt = player.getPersistentData();
-        int rupees = nbt.getInt("rupees");
-
-        if (rupees - amount <0){
-            rupees = 0;
-        } else{
-            rupees -= amount;
-        }
-
-
-        nbt.putInt("rupees",rupees);
-        syncRupee(rupees, (ServerPlayerEntity) player);
-        return rupees;
-
-    }
 
     public static int getRupees(ServerPlayerEntity player){
         int rupee = ((IEntityDataSaver) player).getPersistentData().getInt("rupees");
-        PacketByteBuf buffer = PacketByteBufs.create();
-        buffer.writeInt(rupee);
         syncRupee(rupee, player);
         return rupee;
     }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rokiros-mod:block/dungeon_forest_grass_slab"
+    },
+    "type=double": {
+      "model": "rokiros-mod:block/dungeon_forest_grass"
+    },
+    "type=top": {
+      "model": "rokiros-mod:block/dungeon_forest_grass_slab_top"
+    }
+  }
+}

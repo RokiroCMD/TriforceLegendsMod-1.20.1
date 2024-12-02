@@ -12,6 +12,7 @@ public class ModParticles {
 
     public static final DefaultParticleType PURPLE_SPIRAL_CLOUD_PARTICLE = FabricParticleTypes.simple();
     public static final DefaultParticleType SHINING = FabricParticleTypes.simple();
+    public static final  DefaultParticleType DEKU_NUT_FLASH = FabricParticleTypes.simple();
 
     public static void registerParticles(){
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(RokirosMod.MOD_ID, "purple_spiral_cloud_particle"),
@@ -19,6 +20,9 @@ public class ModParticles {
 
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(RokirosMod.MOD_ID, "shining_particle"),
                 SHINING);
+
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(RokirosMod.MOD_ID,"deku_nut_flash_particle"),
+                DEKU_NUT_FLASH);
     }
 
 }

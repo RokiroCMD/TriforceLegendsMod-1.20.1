@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "rokiros-mod:dungeon_wood_wall",
+    "rokiros-mod:dungeon_forest_wood_wall",
+    "rokiros-mod:dungeon_forest_brick_wall",
+    "rokiros-mod:dungeon_forest_rock_wall"
+  ]
+}

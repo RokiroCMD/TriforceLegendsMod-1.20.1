@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "rokiros-mod:block/dungeon_forest_grass"
+  }
+}

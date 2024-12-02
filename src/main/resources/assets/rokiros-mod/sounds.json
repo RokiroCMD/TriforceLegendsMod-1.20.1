@@ -47,5 +47,59 @@
     "sounds": [
       "rokiros-mod:rupee_obtained"
     ]
+  },
+  "open_equipment_menu": {
+    "subtitle": "sounds.rokiros-mod.open_equipment_menu",
+    "sounds": [
+      "rokiros-mod:open_equipment_menu"
+    ]
+  },
+  "close_equipment_menu": {
+    "subtitle": "sounds.rokiros-mod.close_equipment_menu",
+    "sounds": [
+      "rokiros-mod:close_equipment_menu"
+    ]
+  },
+  "cursor_equipment_menu": {
+    "subtitle": "sounds.rokiros-mod.cursor_equipment_menu",
+    "sounds": [
+      "rokiros-mod:cursor_equipment_menu"
+    ]
+  },
+  "select_equipment_menu": {
+    "subtitle": "sounds.rokiros-mod.select_equipment_menu",
+    "sounds": [
+      "rokiros-mod:select_equipment_menu"
+    ]
+  },
+  "tleft_equipment_menu": {
+    "subtitle": "sounds.rokiros-mod.tleft_equipment_menu",
+    "sounds": [
+      "rokiros-mod:tleft_equipment_menu"
+    ]
+  },
+  "tright_equipment_menu": {
+    "subtitle": "sounds.rokiros-mod.tright_equipment_menu",
+    "sounds": [
+      "rokiros-mod:tright_equipment_menu"
+    ]
+  },
+  "generic_error": {
+    "subtitle": "sounds.rokiros-mod.generic_error",
+    "sounds": [
+      "rokiros-mod:generic_error"
+    ]
+  },
+  "deku_nut_throw": {
+    "subtitle": "sounds.rokiros-mod.deku_nut_throw",
+    "sounds": [
+      "rokiros-mod:deku_nut_throw"
+    ]
+  },
+  "generic_item_equip": {
+    "subtitle": "sounds.rokiros-mod.generic_item_equip",
+    "sounds": [
+      "rokiros-mod:generic_item_equip"
+    ]
   }
 }

@@ -2,7 +2,7 @@ package net.rokiro.rokiromod.item.client;
 
 import net.minecraft.util.Identifier;
 import net.rokiro.rokiromod.RokirosMod;
-import net.rokiro.rokiromod.item.custom.MajorasMaskItem;
+import net.rokiro.rokiromod.item.custom.artifact.MajorasMaskItem;
 import software.bernie.geckolib.model.GeoModel;
 
 public class MajorasMaskModel extends GeoModel<MajorasMaskItem> {

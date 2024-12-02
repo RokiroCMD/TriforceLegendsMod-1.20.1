@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.rokiro.rokiromod.block.ModBlocks;
+import net.rokiro.rokiromod.effects.ModEffects;
 import net.rokiro.rokiromod.entity.ModEntities;
 import net.rokiro.rokiromod.entity.custom.BokoblinEntity;
 import net.rokiro.rokiromod.entity.custom.RupeeEntity;
@@ -27,6 +28,7 @@ public class RokirosMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModSounds.registerSound();
+		ModEffects.registerStatusEffects();
 		ModParticles.registerParticles();
 
 		FuelRegistry.INSTANCE.add(ModItems.GORON_ROCKS,60*20);

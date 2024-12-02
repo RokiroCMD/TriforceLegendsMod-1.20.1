@@ -7,6 +7,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.rokiro.rokiromod.block.ModBlocks;
 import net.rokiro.rokiromod.item.ModItems;
@@ -84,7 +85,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.HYLIAN_STEEL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TRIFORCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GORON_ROCKS, Models.GENERATED);
         itemModelGenerator.register(ModItems.HYLIAN_METAL_DETECTOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.HYLIAN_ROCK_CHUNK, Models.GENERATED);
@@ -99,9 +99,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BOKOBLIN_FANG, Models.GENERATED);
         itemModelGenerator.register(ModItems.BOKOBLIN_HORN, Models.GENERATED);
         itemModelGenerator.register(ModItems.BOKOBLIN_VISCERA, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MAJORAS_MASK, Models.GENERATED);
-
         itemModelGenerator.register(ModItems.MEDIUM_RUPEE_BAG, Models.GENERATED);
 
+        generateArtifactModels(itemModelGenerator);
+
+    }
+
+    private  void generateArtifactModels(ItemModelGenerator itemModelGenerator){
+        for (Item item : ModItems.ARITFACTS_ITEMS){
+            itemModelGenerator.register(item, Models.GENERATED);
+        }
     }
 }

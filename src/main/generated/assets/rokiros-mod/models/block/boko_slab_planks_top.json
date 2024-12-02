@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "rokiros-mod:block/boko_planks",
+    "side": "rokiros-mod:block/boko_planks",
+    "top": "rokiros-mod:block/boko_planks"
+  }
+}

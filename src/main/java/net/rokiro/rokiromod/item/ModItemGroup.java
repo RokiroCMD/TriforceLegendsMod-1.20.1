@@ -1,6 +1,8 @@
 package net.rokiro.rokiromod.item;
 
+import com.eliotlash.mclib.math.functions.classic.Mod;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -21,7 +23,6 @@ public class ModItemGroup {
                     entries.add(ModItems.HYLIAN_ROCK_CHUNK);
                     entries.add(ModItems.HYLIAN_STEEL);
                     entries.add(ModItems.HYLIAN_METAL_DETECTOR);
-                    entries.add(ModItems.TRIFORCE);
                     entries.add(ModItems.SMALL_KEY);
                     entries.add(ModItems.GORON_ROCKS);
                     entries.add(ModItems.BOKOBLIN_FANG);
@@ -29,6 +30,21 @@ public class ModItemGroup {
                     entries.add(ModItems.BOKOBLIN_VISCERA);
                     entries.add(ModItems.MEDIUM_RUPEE_BAG);
                     }).build()
+    );
+
+    public static final ItemGroup ZELDA_ARTIFACTS_GROUP = Registry.register(
+            Registries.ITEM_GROUP, new Identifier(RokirosMod.MOD_ID,"triforce_artifacts"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemgroup.triforce_artifacts"))
+                    .icon(() -> new ItemStack(ModItems.SLINGSHOT))
+                    .entries((displayContext, entries) -> {
+
+                        for (Item item : ModItems.ARITFACTS_ITEMS){
+                            entries.add(item);
+                        }
+
+                    })
+                    .build()
     );
 
     public static final ItemGroup ZELDA_TOOLS_GROUP = Registry.register(

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rokiros-mod:block/boko_slab_planks"
+    },
+    "type=double": {
+      "model": "rokiros-mod:block/boko_planks"
+    },
+    "type=top": {
+      "model": "rokiros-mod:block/boko_slab_planks_top"
+    }
+  }
+}

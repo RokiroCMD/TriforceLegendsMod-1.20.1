@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "rokiros-mod:block/dungeon_forest_grass",
+    "side": "rokiros-mod:block/dungeon_forest_grass",
+    "top": "rokiros-mod:block/dungeon_forest_grass"
+  }
+}

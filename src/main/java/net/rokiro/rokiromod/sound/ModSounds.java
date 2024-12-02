@@ -18,6 +18,15 @@ public class ModSounds {
 
     public static final SoundEvent RUPEE_BOUNCE = registerSoundEvent("rupee_bounce");
     public static final SoundEvent RUPEE_OBTAINED = registerSoundEvent("rupee_obtained");
+    public static final SoundEvent OPEN_EQUIPMENT_MENU = registerSoundEvent("open_equipment_menu");
+    public static final SoundEvent CLOSE_EQUIPMENT_MENU = registerSoundEvent("close_equipment_menu");
+    public static final SoundEvent CURSOR_EQUIPMENT_MENU = registerSoundEvent("cursor_equipment_menu");
+    public static final SoundEvent SELECT_EQUIPMENT_MENU = registerSoundEvent("select_equipment_menu");
+    public static final SoundEvent TURN_RIGHT_EQUIPMENT_MENU = registerSoundEvent("tright_equipment_menu");
+    public static final SoundEvent TURN_LEFT_EQUIPMENT_MENU = registerSoundEvent("tleft_equipment_menu");
+    public static final SoundEvent GENERIC_ERROR = registerSoundEvent("generic_error");
+    public static final SoundEvent DEKU_NUT_THROW = registerSoundEvent("deku_nut_throw");
+    public static final SoundEvent GENERIC_ITEM_EQUIP = registerSoundEvent("generic_item_equip");
 
     private static SoundEvent registerSoundEvent(String name){
         Identifier id = new Identifier(RokirosMod.MOD_ID, name);

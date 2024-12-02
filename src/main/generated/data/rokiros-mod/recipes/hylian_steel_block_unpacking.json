@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "rokiros-mod:hylian_steel_block",
+  "ingredients": [
+    {
+      "item": "rokiros-mod:hylian_steel_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "rokiros-mod:hylian_steel"
+  }
+}

@@ -1,7 +1,6 @@
 {
   "item.rokiros-mod.hylian_steel": "Hylian Steel",
   "item.rokiros-mod.hylian_rock_chunk": "Chunk of Hylian Ore",
-  "item.rokiros-mod.triforce": "Triforce",
   "item.rokiros-mod.hylian_metal_detector": "Hylian Metal Detector",
   "item.rokiros-mod.small_key": "Small key",
   "item.rokiros-mod.goron_rocks": "Goron Rocks",
@@ -14,10 +13,26 @@
   "item.rokiros-mod.bokoblin_fang": "Bokoblin Fang",
   "item.rokiros-mod.bokoblin_horn": "Bokoblin Horn",
   "item.rokiros-mod.bokoblin_viscera": "Bokoblin Viscera",
-  "item.rokiros-mod.majoras_mask": "Majora's Mask",
-
   "item.rokiros-mod.ww_master_sword": "Master Sword [WW]",
   "item.rokiros-mod.medium_rupee_bag": "Medium Rupee Bag",
+
+  "item.rokiros-mod.triforce": "Triforce",
+  "item.rokiros-mod.majoras_mask": "Majora's Mask",
+  "item.rokiros-mod.deku_stick": "Deku Stick",
+  "item.rokiros-mod.deku_nut": "Deku Nut",
+  "item.rokiros-mod.slingshot": "Slingshot",
+  "item.rokiros-mod.beetle": "Beetle",
+  "item.rokiros-mod.bomb": "Bomb",
+  "item.rokiros-mod.bombchu": "Bombchu",
+  "item.rokiros-mod.boomerang": "Boomerang",
+  "item.rokiros-mod.fairy_ocarine": "Fairy Ocarine",
+  "item.rokiros-mod.deku_leaf": "Deku Leaf",
+  "item.rokiros-mod.goddess_lyre": "Lyre of the Goddess",
+  "item.rokiros-mod.ocarine_of_time": "Ocarine of Time",
+  "item.rokiros-mod.sail": "Sail",
+  "item.rokiros-mod.swift_sail": "Swift Sail",
+  "item.rokiros-mod.simple_bow": "Simple Bow",
+  "item.rokiros-mod.wind_waker": "Wind Waker",
 
   "tooltip.rokiros-mod.metal_detector.tooltip": "Detects valuable minerals when Right clicked on ground",
 
@@ -28,6 +43,7 @@
   "itemgroup.triforce_special_blocks": "Triforce Adventures: Special Blocks",
   "itemgroup.triforce_spawners": "Triforce Adventures: Spawners",
   "itemgroup.triforce_armors": "Triforce Adventures: Armors",
+  "itemgroup.triforce_artifacts": "Triforce Adventures: Artifacts",
 
   "block.rokiros-mod.hylian_steel_block": "Block of Hylian Steel",
   "block.rokiros-mod.hylian_ore": "Hylian Ore",
@@ -87,7 +103,21 @@
   "sounds.rokiros-mod.bokoblin_hit": "Bokoblin hit",
   "sounds.rokiros-mod.skullkid_scream": "Skullkid scream",
   "sounds.rokiros-mod.skullkid_laugh": "Skullkid laugh",
+  "sounds.rokiros-mod.close_equipment_menu": "Equipment Menu closed",
+  "sounds.rokiros-mod.open_equipment_menu": "Equipment Menu opened",
+  "sounds.rokiros-mod.select_equipment_menu": "Equipment Menu selected",
+  "sounds.rokiros-mod.cursor_equipment_menu": "Equipment Menu cursor",
+  "sounds.rokiros-mod.tright_equipment_menu": "Equipment Menu right turn",
+  "sounds.rokiros-mod.tleft_equipment_menu": "Equipment Menu left turn",
+  "sounds.rokiros-mod.generic_error": "Wrong action",
+  "sounds.rokiros-mod.deku_nut_throw": "Deku nut throw",
 
   "key.rokiros-mod.category.triforce": "Triforce Adventures",
-  "key.rokiros-mod.open_special_inventory": "Open Equipment Inv"
+  "key.rokiros-mod.open_special_inventory": "Open Equipment Inv",
+  "key.rokiros-mod.use_first_artifact_slot": "Use #1 Artifact Slot",
+  "key.rokiros-mod.use_second_artifact_slot": "Use #2 Artifact Slot",
+  "key.rokiros-mod.use_third_artifact_slot": "Use #3 Artifact Slot",
+  "key.rokiros-mod.use_fourth_artifact_slot": "Use #4 Artifact Slot",
+
+  "effect.rokiros-mod.nut_stunned": "Nut Stunned"
 }

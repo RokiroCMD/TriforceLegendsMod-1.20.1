@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "rokiros-mod:block/dungeon_forest_wood"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "rokiros-mod:block/dungeon_forest_wood"
+  }
+}

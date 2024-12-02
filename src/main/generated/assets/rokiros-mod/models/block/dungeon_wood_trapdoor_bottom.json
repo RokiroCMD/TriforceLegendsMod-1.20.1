@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_bottom",
+  "textures": {
+    "texture": "rokiros-mod:block/dungeon_wood_trapdoor"
+  }
+}

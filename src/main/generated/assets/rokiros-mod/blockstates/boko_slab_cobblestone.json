@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rokiros-mod:block/boko_slab_cobblestone"
+    },
+    "type=double": {
+      "model": "rokiros-mod:block/boko_cobblestone"
+    },
+    "type=top": {
+      "model": "rokiros-mod:block/boko_slab_cobblestone_top"
+    }
+  }
+}

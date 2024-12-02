@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "rokiros-mod:boko_cobblestone",
+    "rokiros-mod:boko_slab_cobblestone",
+    "rokiros-mod:boko_stairs_cobblestone",
+    "rokiros-mod:boko_stone",
+    "rokiros-mod:boko_slab_stone",
+    "rokiros-mod:boko_stairs_stone"
+  ]
+}

@@ -17,13 +17,13 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(ItemRenderer.class)
 public abstract class ItemRendererMixin {
     @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
-    public BakedModel useHylianSwordModel(BakedModel value,
-                                          ItemStack stack,
-                                          ModelTransformationMode renderMode,
-                                          boolean leftHanded, MatrixStack matrices,
-                                          VertexConsumerProvider vertexConsumers,
-                                          int light,
-                                          int overlay){
+    public BakedModel useCustomDiferentModel(BakedModel value,
+                                             ItemStack stack,
+                                             ModelTransformationMode renderMode,
+                                             boolean leftHanded, MatrixStack matrices,
+                                             VertexConsumerProvider vertexConsumers,
+                                             int light,
+                                             int overlay){
 
         if (stack.isOf(ModItems.HYLIAN_SWORD) && renderMode != ModelTransformationMode.GUI) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(RokirosMod.MOD_ID, "hylian_sword_3d", "inventory"));

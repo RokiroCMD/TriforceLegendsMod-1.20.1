@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "rokiros-mod:block/dungeon_wood"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rokiros-mod:hylian_steel",
+  "key": {
+    "#": {
+      "item": "rokiros-mod:hylian_steel"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "rokiros-mod:hylian_steel_block"
+  },
+  "show_notification": true
+}

@@ -18,10 +18,9 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.rokiro.rokiromod.RokirosMod;
+import net.rokiro.rokiromod.item.ModItems;
 import net.rokiro.rokiromod.networking.ModPackets;
-import net.rokiro.rokiromod.util.IEntityDataSaver;
-import net.rokiro.rokiromod.util.ModTags;
-import net.rokiro.rokiromod.util.RupeesData;
+import net.rokiro.rokiromod.util.*;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -59,6 +58,12 @@ public class MetalDetectorItem extends Item {
             context.getStack().damage(1, context.getPlayer(),
                     playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
             ClientPlayNetworking.send(ModPackets.RUPEES_ID, PacketByteBufs.create());
+
+            ArtifactEquipmentData.clientSetArtifactsAll(List.of("none",
+                    "none",
+                    ModItems.MAJORAS_MASK.getTranslationKey(),
+                    ModItems.TRIFORCE.getTranslationKey()
+            ));
 
         }
 

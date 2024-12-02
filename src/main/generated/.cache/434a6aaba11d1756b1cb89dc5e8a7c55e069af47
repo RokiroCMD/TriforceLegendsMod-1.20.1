@@ -1,0 +1,8 @@
+// 1.20.1	2024-08-13T21:36:45.7740244	Rokiro's Mod/Tags for minecraft:block
+272f5e7b8f883b4d8d1d0059a4e86f641a4500e9 data\minecraft\tags\blocks\fences.json
+8df880594fb250bffe54d4cb6c8b4644daf75f3c data\minecraft\tags\blocks\fence_gates.json
+c176baf55e5f2d3f65ab97a44db49538f87833b0 data\minecraft\tags\blocks\walls.json
+d1d23de65c6c915c025b305e7ec984d0b7d79011 data\minecraft\tags\blocks\mineable\pickaxe.json
+3d0ef482b3e943a526f14ad33ca232d273a9e443 data\rokiros-mod\tags\blocks\metal_detector_detectable_blocks.json
+50ced9f36ab9d5bea7e6fb79a18ed2fa94ee4951 data\minecraft\tags\blocks\needs_iron_tool.json
+c5e2cb2de2f05d2382bf121a5b6481034a6b5a48 data\minecraft\tags\blocks\needs_stone_tool.json

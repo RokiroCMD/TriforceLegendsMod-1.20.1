@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": {
+      "item": "rokiros-mod:hylian_steel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ii ",
+    "is ",
+    " s "
+  ],
+  "result": {
+    "item": "rokiros-mod:hylian_axe"
+  },
+  "show_notification": true
+}

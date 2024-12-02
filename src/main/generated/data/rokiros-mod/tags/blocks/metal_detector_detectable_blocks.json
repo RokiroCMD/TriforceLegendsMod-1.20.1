@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "rokiros-mod:hylian_ore",
+    "#minecraft:iron_ores",
+    "#minecraft:diamond_ores",
+    "#minecraft:gold_ores",
+    "#minecraft:emerald_ores"
+  ]
+}

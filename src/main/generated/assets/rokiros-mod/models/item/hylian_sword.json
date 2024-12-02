@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "rokiros-mod:item/hylian_sword"
+  }
+}
