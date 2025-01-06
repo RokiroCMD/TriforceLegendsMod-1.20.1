@@ -2,6 +2,7 @@ package net.rokiro.rokiromod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.rokiro.rokiromod.block.ModBlocks;
@@ -14,6 +15,8 @@ import net.rokiro.rokiromod.item.ModItems;
 import net.rokiro.rokiromod.networking.ModPackets;
 import net.rokiro.rokiromod.particle.ModParticles;
 import net.rokiro.rokiromod.sound.ModSounds;
+import net.rokiro.rokiromod.util.ArtifactEquipmentData;
+import net.rokiro.rokiromod.util.RupeesData;
 import net.rokiro.rokiromod.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +39,12 @@ public class RokirosMod implements ModInitializer {
 
 		ModWorldGeneration.generateModWorldGen();
 		ModPackets.registerC2SPackets();
-
-
+		RegisterEvents();
 	}
+
+	private void RegisterEvents(){
+		ServerPlayerEvents.COPY_FROM.register(ArtifactEquipmentData::onPlayerClone);
+		ServerPlayerEvents.COPY_FROM.register(RupeesData::onPlayerClone);
+	}
+
 }

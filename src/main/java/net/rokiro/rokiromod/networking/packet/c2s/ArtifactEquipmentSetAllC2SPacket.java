@@ -1,8 +1,6 @@
 package net.rokiro.rokiromod.networking.packet.c2s;
 
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
-import net.minecraft.nbt.NbtList;
-import net.minecraft.nbt.NbtString;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
@@ -20,6 +18,6 @@ public class ArtifactEquipmentSetAllC2SPacket {
         String concatenatedString = new String(byteArray, StandardCharsets.UTF_8);
         List<String> artifactsIds = List.of(concatenatedString.split("\\|"));
 
-        ArtifactEquipmentData.setArtifactAll(player,artifactsIds);
+        ArtifactEquipmentData.setArtifactAllSlots(player,artifactsIds);
     }
 }

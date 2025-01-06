@@ -3,7 +3,6 @@ package net.rokiro.rokiromod.client.hud;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
@@ -11,7 +10,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.rokiro.rokiromod.RokirosMod;
 import net.rokiro.rokiromod.event.KeyInputHandler;
-import net.rokiro.rokiromod.sound.ModSounds;
 import net.rokiro.rokiromod.util.*;
 import org.lwjgl.glfw.GLFW;
 import software.bernie.geckolib.util.ClientUtils;
@@ -94,7 +92,7 @@ public class SpecialEquipmentHudOverlay implements HudRenderCallback {
 
     public static void updateArtifactEquipment(){
 
-        ArtifactEquipmentPlayer artifactEquipmentPlayer = new ArtifactEquipmentPlayer(ClientUtils.getClientPlayer());
+        ArtifactsInventoryPlayer artifactEquipmentPlayer = new ArtifactsInventoryPlayer(ClientUtils.getClientPlayer());
 
         int index = 0;
         for (ArtifactItemStack artifactItemStack : artifactEquipmentPlayer.getArtifactItems()){

@@ -1,7 +1,5 @@
 package net.rokiro.rokiromod.util;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -11,8 +9,8 @@ import net.minecraft.nbt.*;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.registry.Registries;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.rokiro.rokiromod.RokirosMod;
 import net.rokiro.rokiromod.networking.ModPackets;
 import org.jetbrains.annotations.Nullable;
 
@@ -36,7 +34,7 @@ public class ArtifactEquipmentData {
         syncArtifactEquipment(player,nbtList.stream().map(nbtElement -> nbtElement.asString()).toList());
     }
 
-    public static void setArtifactAll(ServerPlayerEntity player, List<String> artifacts){
+    public static void setArtifactAllSlots(ServerPlayerEntity player, List<String> artifacts){
         NbtCompound nbt = ((IEntityDataSaver) (player)).getPersistentData();
 
         NbtList nbtList = new NbtList();
@@ -57,7 +55,7 @@ public class ArtifactEquipmentData {
         ClientPlayNetworking.send(ModPackets.ARTIFACT_EQUIPMENT_SET, buffer);
     }
 
-    public static void clientSetArtifactsAll(List<String> artifacts){
+    public static void clientSetArtifactsAllSlots(List<String> artifacts){
         PacketByteBuf buffer = PacketByteBufs.create();
         StringBuilder sb = new StringBuilder();
         for (String str : artifacts) {
@@ -74,7 +72,7 @@ public class ArtifactEquipmentData {
         ClientPlayNetworking.send(ModPackets.ARTIFACT_EQUIPMENT_SET_ALL, buffer);
     }
 
-    public static List<String> getArtifactEquipment(ServerPlayerEntity player){
+    public static List<String> getArtifactEquipmentSlots(ServerPlayerEntity player){
         NbtCompound nbt = ((IEntityDataSaver) (player)).getPersistentData();
 
         try {
@@ -138,7 +136,7 @@ public class ArtifactEquipmentData {
         ServerPlayNetworking.send(player, ModPackets.ARTIFACT_EQUIPMENT_SYNC, buffer);
     }
 
-    public static ArtifactItemStack getArtifactItemStackById(String id){
+    public static ArtifactItemStack getArtifactItemStackByIdInSlots(String id){
         String input = id;
 
         if (id.equals("null")) return null;
@@ -160,4 +158,15 @@ public class ArtifactEquipmentData {
 
         return artifactItemStack;
     }
+
+    public static void onPlayerClone(ServerPlayerEntity oldPlayer, ServerPlayerEntity newPlayer, boolean alive) {
+        // Solo copiar datos si el jugador murió (alive es falso)
+        if (!alive) {
+            NbtList oldNbt = ((IEntityDataSaver) (oldPlayer)).getPersistentData().getList(ARTIFACT_EQUIPMENT_KEY,NbtElement.STRING_TYPE);
+            ((IEntityDataSaver) (newPlayer)).getPersistentData().put(ARTIFACT_EQUIPMENT_KEY,oldNbt);
+            oldPlayer.sendMessage(Text.literal(oldNbt.toString()));
+            // Copiar los datos personalizados
+        }
+    }
+
 }

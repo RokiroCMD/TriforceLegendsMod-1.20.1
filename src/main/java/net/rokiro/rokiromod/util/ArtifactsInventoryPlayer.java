@@ -5,15 +5,15 @@ import net.minecraft.entity.player.PlayerEntity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArtifactEquipmentPlayer {
+public class ArtifactsInventoryPlayer {
 
     List<ArtifactItemStack> artifactItems = new ArrayList<>();
 
-    public ArtifactEquipmentPlayer(PlayerEntity player) {
+    public ArtifactsInventoryPlayer(PlayerEntity player) {
         List<String> strArtifacts = ArtifactEquipmentData.clientGetArtifactEquipment(player);
         strArtifacts.stream().forEach(s -> {
             if (s.equals("none")) artifactItems.add(null) ;
-            else artifactItems.add(ArtifactEquipmentData.getArtifactItemStackById(s));
+            else artifactItems.add(ArtifactEquipmentData.getArtifactItemStackByIdInSlots(s));
         } );
     }
 

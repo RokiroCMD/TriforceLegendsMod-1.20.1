@@ -6,10 +6,8 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
-import net.minecraft.util.Colors;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.rokiro.rokiromod.RokirosMod;
@@ -20,7 +18,6 @@ import net.rokiro.rokiromod.util.*;
 import org.joml.Matrix4f;
 import software.bernie.geckolib.util.ClientUtils;
 
-import java.awt.font.FontRenderContext;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,6 +72,10 @@ public class ArtifactsMenuScreen extends Screen {
                 itemCases.add(tempWidget);
             }
         }
+        LoadArtifactsInventory();
+
+    }
+    private void LoadArtifactsInventory(){
         for (int i = 0; i < ModItems.ARITFACTS_ITEMS.size(); i++){
             ArtifactItemStack tmpArtifact =  new ArtifactItemStack( (ArtifactItem) (ModItems.ARITFACTS_ITEMS.get(i)));
             tmpArtifact.setQuantity(!tmpArtifact.canStack() ? 1 :
@@ -85,7 +86,6 @@ public class ArtifactsMenuScreen extends Screen {
                 break;
             }
         }
-
     }
     private void initEquipedSlots(){
         equipedSlots = new ArrayList<>();
@@ -99,7 +99,7 @@ public class ArtifactsMenuScreen extends Screen {
         equipedSlots.add(addDrawableChild( new EquipedSlotWidget(this,i+((int)((36 + 24 + 3) * scale)) ,v+((int)(140 * scale)), slot ->{
         })));
 
-        ArtifactEquipmentPlayer artifactEquipmentPlayer = new ArtifactEquipmentPlayer(client.player);
+        ArtifactsInventoryPlayer artifactEquipmentPlayer = new ArtifactsInventoryPlayer(client.player);
 
         int index = 0;
         for (ArtifactItemStack artifactItemStack : artifactEquipmentPlayer.getArtifactItems()){
@@ -313,7 +313,7 @@ public class ArtifactsMenuScreen extends Screen {
             return "none";
         }).toList();
 
-        ArtifactEquipmentData.clientSetArtifactsAll(artifactList);
+        ArtifactEquipmentData.clientSetArtifactsAllSlots(artifactList);
 
         ((ArtifactSelectable) client.player.getInventory()).deselectArtifact();
     }

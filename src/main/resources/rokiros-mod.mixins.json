@@ -12,7 +12,8 @@
     "InventoryScreenMixin",
     "ItemRendererAccessor",
     "ItemRendererMixin",
-    "ModelLoaderMixin"
+    "ModelLoaderMixin",
+    "CustomCameraMixin"
   ],
   "injectors": {
     "defaultRequire": 1

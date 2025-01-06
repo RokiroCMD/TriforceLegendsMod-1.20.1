@@ -29,7 +29,7 @@ public abstract class ModPlayerServerMixin {
                             RupeesData.getRupees(this.networkHandler.getPlayer());
                             age = 0;
                             ArtifactEquipmentData.syncArtifactEquipment(this.networkHandler.getPlayer(),
-                                    ArtifactEquipmentData.getArtifactEquipment(this.networkHandler.getPlayer()));
+                                    ArtifactEquipmentData.getArtifactEquipmentSlots(this.networkHandler.getPlayer()));
                             hasSpawned = true;
                         } catch(Exception e){
                             RokirosMod.LOGGER.info("Error at loading RupeeInformation");
